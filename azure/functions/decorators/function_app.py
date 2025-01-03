@@ -47,7 +47,8 @@ from .function_name import FunctionName
 from .warmup import WarmUpTrigger
 from .._http_asgi import AsgiMiddleware
 from .._http_wsgi import WsgiMiddleware, Context
-from azure.functions.decorators.mysql import MySqlInput, MySqlOutput, MySqlTrigger
+from azure.functions.decorators.mysql import MySqlInput, MySqlOutput, \
+        MySqlTrigger
 
 
 class Function(object):
