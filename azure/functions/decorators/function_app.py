@@ -1444,14 +1444,14 @@ class TriggerApi(DecoratorApi, ABC):
             return decorator()
 
         return wrap
-    
-     def mysql_trigger(self,
-                    arg_name: str,
-                    table_name: str,
-                    connection_string_setting: str,
-                    leases_table_name: Optional[str] = None,
-                    data_type: Optional[DataType] = None,
-                    **kwargs) -> Callable[..., Any]:
+
+    def mysql_trigger(self,
+                      arg_name: str,
+                      table_name: str,
+                      connection_string_setting: str,
+                      leases_table_name: Optional[str] = None,
+                      data_type: Optional[DataType] = None,
+                      **kwargs) -> Callable[..., Any]:
         """The mysql_trigger decorator adds :class:`MySqlTrigger`
         to the :class:`FunctionBuilder` object
         for building :class:`Function` object used in worker function
@@ -1496,7 +1496,6 @@ class TriggerApi(DecoratorApi, ABC):
             return decorator()
 
         return wrap
-
 
     def generic_trigger(self,
                         arg_name: str,
@@ -3606,15 +3605,15 @@ class BindingApi(DecoratorApi, ABC):
             return decorator()
 
         return wrap
-    
+
     def mysql_input(self,
-                  arg_name: str,
-                  command_text: str,
-                  connection_string_setting: str,
-                  command_type: Optional[str] = 'Text',
-                  parameters: Optional[str] = None,
-                  data_type: Optional[DataType] = None,
-                  **kwargs) -> Callable[..., Any]:
+                    arg_name: str,
+                    command_text: str,
+                    connection_string_setting: str,
+                    command_type: Optional[str] = 'Text',
+                    parameters: Optional[str] = None,
+                    data_type: Optional[DataType] = None,
+                    **kwargs) -> Callable[..., Any]:
         """The mysql_input decorator adds
         :class:`MySqlInput` to the :class:`FunctionBuilder` object
         for building :class:`Function` object used in worker function
@@ -3662,13 +3661,13 @@ class BindingApi(DecoratorApi, ABC):
             return decorator()
 
         return wrap
-    
+
     def mysql_output(self,
-                   arg_name: str,
-                   command_text: str,
-                   connection_string_setting: str,
-                   data_type: Optional[DataType] = None,
-                   **kwargs) -> Callable[..., Any]:
+                     arg_name: str,
+                     command_text: str,
+                     connection_string_setting: str,
+                     data_type: Optional[DataType] = None,
+                     **kwargs) -> Callable[..., Any]:
         """The mysql_output decorator adds
         :class:`MySqlOutput` to the :class:`FunctionBuilder` object
         for building :class:`Function` object used in worker function
@@ -3709,7 +3708,6 @@ class BindingApi(DecoratorApi, ABC):
             return decorator()
 
         return wrap
-
 
 
 class SettingsApi(DecoratorApi, ABC):
