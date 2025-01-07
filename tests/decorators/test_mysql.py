@@ -11,10 +11,10 @@ from azure.functions.decorators.mysql import MySqlInput, \
 class TestMySql(unittest.TestCase):
     def test_mysql_input_valid_creation(self):
         input = MySqlInput(name="req",
-                         command_text="dummy_query",
-                         connection_string_setting="dummy_setting",
-                         data_type=DataType.UNDEFINED,
-                         dummy_field="dummy")
+                           command_text="dummy_query",
+                           connection_string_setting="dummy_setting",
+                           data_type=DataType.UNDEFINED,
+                           dummy_field="dummy")
         self.assertEqual(input.get_binding_name(), "mysql")
         self.assertEqual(input.get_dict_repr(),
                          {"commandText": "dummy_query",
@@ -25,13 +25,13 @@ class TestMySql(unittest.TestCase):
                           "dummyField": "dummy",
                           "name": "req",
                           "type": MYSQL})
-                          
+
     def test_mysql_output_valid_creation(self):
         output = MySqlOutput(name="req",
-                           command_text="dummy_table",
-                           connection_string_setting="dummy_setting",
-                           data_type=DataType.UNDEFINED,
-                           dummy_field="dummy")
+                             command_text="dummy_table",
+                             connection_string_setting="dummy_setting",
+                             data_type=DataType.UNDEFINED,
+                             dummy_field="dummy")
         self.assertEqual(output.get_binding_name(), "mysql")
         self.assertEqual(output.get_dict_repr(),
                          {"commandText": "dummy_table",
@@ -44,10 +44,10 @@ class TestMySql(unittest.TestCase):
 
     def test_mysql_trigger_valid_creation(self):
         trigger = MySqlTrigger(name="req",
-                             table_name="dummy_table",
-                             connection_string_setting="dummy_setting",
-                             data_type=DataType.UNDEFINED,
-                             dummy_field="dummy")
+                               table_name="dummy_table",
+                               connection_string_setting="dummy_setting",
+                               data_type=DataType.UNDEFINED,
+                               dummy_field="dummy")
 
         self.assertEqual(trigger.get_binding_name(), "mysqlTrigger")
         self.assertEqual(trigger.get_dict_repr(),
