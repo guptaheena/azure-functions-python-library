@@ -2381,14 +2381,14 @@ class TestFunctionsApp(unittest.TestCase):
         app = self.func_app
 
         @app.mysql_trigger(arg_name="trigger",
-                         table_name="dummy_table",
-                         connection_string_setting="dummy_setting")
+                           table_name="dummy_table",
+                           connection_string_setting="dummy_setting")
         @app.mysql_input(arg_name="in",
-                       command_text="dummy_query",
-                       connection_string_setting="dummy_setting")
+                         command_text="dummy_query",
+                         connection_string_setting="dummy_setting")
         @app.mysql_output(arg_name="out",
-                        command_text="dummy_table",
-                        connection_string_setting="dummy_setting")
+                          command_text="dummy_table",
+                          connection_string_setting="dummy_setting")
         def dummy():
             pass
 
@@ -2426,22 +2426,22 @@ class TestFunctionsApp(unittest.TestCase):
         app = self.func_app
 
         @app.mysql_trigger(arg_name="trigger",
-                         table_name="dummy_table",
+                           table_name="dummy_table",
+                           connection_string_setting="dummy_setting",
+                           data_type=DataType.STRING,
+                           dummy_field="dummy")
+        @app.mysql_input(arg_name="in",
+                         command_text="dummy_query",
                          connection_string_setting="dummy_setting",
+                         command_type="Text",
+                         parameters="dummy_parameters",
                          data_type=DataType.STRING,
                          dummy_field="dummy")
-        @app.mysql_input(arg_name="in",
-                       command_text="dummy_query",
-                       connection_string_setting="dummy_setting",
-                       command_type="Text",
-                       parameters="dummy_parameters",
-                       data_type=DataType.STRING,
-                       dummy_field="dummy")
         @app.mysql_output(arg_name="out",
-                        command_text="dummy_table",
-                        connection_string_setting="dummy_setting",
-                        data_type=DataType.STRING,
-                        dummy_field="dummy")
+                          command_text="dummy_table",
+                          connection_string_setting="dummy_setting",
+                          data_type=DataType.STRING,
+                          dummy_field="dummy")
         def dummy():
             pass
 
@@ -2486,8 +2486,8 @@ class TestFunctionsApp(unittest.TestCase):
         app = self.func_app
 
         @app.mysql_trigger(arg_name="trigger",
-                         table_name="dummy_table",
-                         connection_string_setting="dummy_setting")
+                           table_name="dummy_table",
+                           connection_string_setting="dummy_setting")
         def dummy():
             pass
 
@@ -2508,11 +2508,11 @@ class TestFunctionsApp(unittest.TestCase):
         app = self.func_app
 
         @app.mysql_trigger(arg_name="trigger",
-                         table_name="dummy_table",
-                         connection_string_setting="dummy_setting")
+                           table_name="dummy_table",
+                           connection_string_setting="dummy_setting")
         @app.mysql_input(arg_name="in",
-                       command_text="dummy_query",
-                       connection_string_setting="dummy_setting")
+                         command_text="dummy_query",
+                         connection_string_setting="dummy_setting")
         def dummy():
             pass
 
@@ -2534,11 +2534,11 @@ class TestFunctionsApp(unittest.TestCase):
         app = self.func_app
 
         @app.mysql_trigger(arg_name="trigger",
-                         table_name="dummy_table",
-                         connection_string_setting="dummy_setting")
+                           table_name="dummy_table",
+                           connection_string_setting="dummy_setting")
         @app.mysql_output(arg_name="out",
-                        command_text="dummy_table",
-                        connection_string_setting="dummy_setting")
+                          command_text="dummy_table",
+                          connection_string_setting="dummy_setting")
         def dummy():
             pass
 
@@ -2554,4 +2554,3 @@ class TestFunctionsApp(unittest.TestCase):
             "commandText": "dummy_table",
             "connectionStringSetting": "dummy_setting",
         })
-
