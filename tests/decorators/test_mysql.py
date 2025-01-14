@@ -58,3 +58,4 @@ class TestMySql(unittest.TestCase):
                           "dummyField": "dummy",
                           "name": "req",
                           "type": MYSQL_TRIGGER})
+                          
